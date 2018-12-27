@@ -25,7 +25,7 @@ class Ssh {
         return new Promise((resolve, reject) => {
             this.connection.exec(command, (err, stream) => {
                 if (err) {
-                    reject();
+                    reject(err);
                     return;
                 }
 
